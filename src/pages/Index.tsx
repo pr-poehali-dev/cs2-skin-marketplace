@@ -13,20 +13,20 @@ interface SkinItem {
   name: string;
   weapon: string;
   price: number;
-  rarity: 'Consumer' | 'Industrial' | 'Mil-Spec' | 'Restricted' | 'Classified' | 'Covert';
-  quality: 'Battle-Scarred' | 'Well-Worn' | 'Field-Tested' | 'Minimal Wear' | 'Factory New';
+  rarity: 'Потребительский' | 'Промышленный' | 'Армейский' | 'Запрещённый' | 'Секретный' | 'Тайный';
+  quality: 'Закалённое в боях' | 'Немного поношенное' | 'После полевых испытаний' | 'Поношенное' | 'Прямо с завода';
   collection: string;
   image: string;
   rating: number;
 }
 
 const rarityColors = {
-  'Consumer': 'bg-gray-500',
-  'Industrial': 'bg-blue-500', 
-  'Mil-Spec': 'bg-purple-500',
-  'Restricted': 'bg-pink-500',
-  'Classified': 'bg-red-500',
-  'Covert': 'bg-yellow-500'
+  'Потребительский': 'bg-gray-500',
+  'Промышленный': 'bg-blue-500', 
+  'Армейский': 'bg-purple-500',
+  'Запрещённый': 'bg-pink-500',
+  'Секретный': 'bg-red-500',
+  'Тайный': 'bg-yellow-500'
 };
 
 const mockSkins: SkinItem[] = [
@@ -35,8 +35,8 @@ const mockSkins: SkinItem[] = [
     name: 'Redline',
     weapon: 'AK-47',
     price: 45.99,
-    rarity: 'Classified',
-    quality: 'Minimal Wear',
+    rarity: 'Секретный',
+    quality: 'Поношенное',
     collection: 'Winter Offensive',
     image: '/img/35337050-dec5-47b2-8019-aa1fd378a6e4.jpg',
     rating: 4.8
@@ -45,9 +45,9 @@ const mockSkins: SkinItem[] = [
     id: 2,
     name: 'Lightning Strike',
     weapon: 'AWP',
-    price: 89.99,
-    rarity: 'Classified',
-    quality: 'Factory New',
+    price: 189.99,
+    rarity: 'Секретный',
+    quality: 'Прямо с завода',
     collection: 'Chroma',
     image: '/img/75cbceb6-d163-42d5-8461-7a9b40b9c713.jpg',
     rating: 4.9
@@ -57,11 +57,110 @@ const mockSkins: SkinItem[] = [
     name: 'Dragon King',
     weapon: 'M4A4',
     price: 125.50,
-    rarity: 'Covert',
-    quality: 'Field-Tested',
+    rarity: 'Тайный',
+    quality: 'После полевых испытаний',
     collection: 'Cache',
     image: '/img/8744826a-1493-4924-9295-1ba97450a6da.jpg',
     rating: 4.7
+  },
+  {
+    id: 4,
+    name: 'Fade',
+    weapon: 'Glock-18',
+    price: 234.00,
+    rarity: 'Секретный',
+    quality: 'Прямо с завода',
+    collection: 'Dust 2',
+    image: '/img/5b6534a8-8e32-4ccb-8160-3107e339f89c.jpg',
+    rating: 4.6
+  },
+  {
+    id: 5,
+    name: 'Tiger Tooth',
+    weapon: '★ Karambit',
+    price: 999.99,
+    rarity: 'Тайный',
+    quality: 'Прямо с завода',
+    collection: 'Chroma',
+    image: '/img/ccbef25f-2684-4806-975e-8869b4e09b6b.jpg',
+    rating: 5.0
+  },
+  {
+    id: 6,
+    name: 'Dark Water',
+    weapon: 'USP-S',
+    price: 25.50,
+    rarity: 'Армейский',
+    quality: 'Поношенное',
+    collection: 'Arms Deal',
+    image: '/img/31d8571a-31b6-4fdd-8d5d-7f97dfddf061.jpg',
+    rating: 4.3
+  },
+  {
+    id: 7,
+    name: 'Asiimov',
+    weapon: 'AWP',
+    price: 89.99,
+    rarity: 'Тайный',
+    quality: 'После полевых испытаний',
+    collection: 'Operation Phoenix',
+    image: '/img/75cbceb6-d163-42d5-8461-7a9b40b9c713.jpg',
+    rating: 4.8
+  },
+  {
+    id: 8,
+    name: 'Vulcan',
+    weapon: 'AK-47',
+    price: 67.99,
+    rarity: 'Секретный',
+    quality: 'Немного поношенное',
+    collection: 'Phoenix',
+    image: '/img/35337050-dec5-47b2-8019-aa1fd378a6e4.jpg',
+    rating: 4.7
+  },
+  {
+    id: 9,
+    name: 'Howl',
+    weapon: 'M4A4',
+    price: 1899.99,
+    rarity: 'Тайный',
+    quality: 'Прямо с завода',
+    collection: 'Huntsman',
+    image: '/img/8744826a-1493-4924-9295-1ba97450a6da.jpg',
+    rating: 5.0
+  },
+  {
+    id: 10,
+    name: 'Kill Confirmed',
+    weapon: 'USP-S',
+    price: 45.50,
+    rarity: 'Секретный',
+    quality: 'Поношенное',
+    collection: 'Gamma',
+    image: '/img/31d8571a-31b6-4fdd-8d5d-7f97dfddf061.jpg',
+    rating: 4.5
+  },
+  {
+    id: 11,
+    name: 'Hypnotic',
+    weapon: 'Nova',
+    price: 12.99,
+    rarity: 'Промышленный',
+    quality: 'Закалённое в боях',
+    collection: 'Dust 2',
+    image: '/img/35337050-dec5-47b2-8019-aa1fd378a6e4.jpg',
+    rating: 3.8
+  },
+  {
+    id: 12,
+    name: 'Case Hardened',
+    weapon: 'AK-47',
+    price: 156.00,
+    rarity: 'Армейский',
+    quality: 'Немного поношенное',
+    collection: 'Arms Deal',
+    image: '/img/35337050-dec5-47b2-8019-aa1fd378a6e4.jpg',
+    rating: 4.4
   }
 ];
 
@@ -217,12 +316,12 @@ export default function Index() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">Все редкости</SelectItem>
-                <SelectItem value="Consumer">Consumer</SelectItem>
-                <SelectItem value="Industrial">Industrial</SelectItem>
-                <SelectItem value="Mil-Spec">Mil-Spec</SelectItem>
-                <SelectItem value="Restricted">Restricted</SelectItem>
-                <SelectItem value="Classified">Classified</SelectItem>
-                <SelectItem value="Covert">Covert</SelectItem>
+                <SelectItem value="Потребительский">Потребительский</SelectItem>
+                <SelectItem value="Промышленный">Промышленный</SelectItem>
+                <SelectItem value="Армейский">Армейский</SelectItem>
+                <SelectItem value="Запрещённый">Запрещённый</SelectItem>
+                <SelectItem value="Секретный">Секретный</SelectItem>
+                <SelectItem value="Тайный">Тайный</SelectItem>
               </SelectContent>
             </Select>
             <Select value={selectedQuality} onValueChange={setSelectedQuality}>
@@ -231,11 +330,11 @@ export default function Index() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">Все качества</SelectItem>
-                <SelectItem value="Battle-Scarred">Battle-Scarred</SelectItem>
-                <SelectItem value="Well-Worn">Well-Worn</SelectItem>
-                <SelectItem value="Field-Tested">Field-Tested</SelectItem>
-                <SelectItem value="Minimal Wear">Minimal Wear</SelectItem>
-                <SelectItem value="Factory New">Factory New</SelectItem>
+                <SelectItem value="Закалённое в боях">Закалённое в боях</SelectItem>
+                <SelectItem value="Немного поношенное">Немного поношенное</SelectItem>
+                <SelectItem value="После полевых испытаний">После полевых испытаний</SelectItem>
+                <SelectItem value="Поношенное">Поношенное</SelectItem>
+                <SelectItem value="Прямо с завода">Прямо с завода</SelectItem>
               </SelectContent>
             </Select>
             <Select value={priceRange} onValueChange={setPriceRange}>
